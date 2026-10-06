@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loading and performance module | Part 107 Prep</title>
+<meta name="description" content="Study module: weight and balance, center of gravity, load factor, stalls, density altitude, and battery endurance for small unmanned aircraft.">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<canvas id="chart-bg" aria-hidden="true"></canvas>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="24" fill="none" stroke="#5d96f5" stroke-width="2.5" stroke-dasharray="6 4"/><g stroke="#f3ead7" stroke-width="3.5" stroke-linecap="round"><line x1="20" y1="20" x2="44" y2="44"/><line x1="20" y1="44" x2="44" y2="20"/></g><g fill="none" stroke="#f3ead7" stroke-width="2.5"><circle cx="20" cy="20" r="6"/><circle cx="44" cy="20" r="6"/><circle cx="20" cy="44" r="6"/><circle cx="44" cy="44" r="6"/></g><circle cx="32" cy="32" r="5" fill="#ffb02e"/></svg>
+      <span>Part 107 Prep<small>Remote pilot study site</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href="process.html">The process</a>
+      <a href="study.html">Study guide</a>
+      <a href="regulations.html">Regulations</a>
+      <a href="safety.html">Safety</a>
+      <a href="resources.html">Resources</a>
+      <a class="nav-cta" href="exam.html">Practice exam</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Study module 4 of 5</p>
+        <h1>Loading and performance</h1>
+        <p>The smallest knowledge area on the test, but every question in it follows from a handful of physical ideas: where the weight sits, how much there is, how dense the air is, and how hard the aircraft is being asked to turn.</p>
+      </div>
+      <div class="article">
+        <aside class="toc" aria-label="On this page">
+          <div class="toc-title">On this page</div>
+          <ol>
+            <li><a href="#forces">The four forces</a></li>
+            <li><a href="#weight">Weight and balance</a></li>
+            <li><a href="#loadfactor">Load factor and turns</a></li>
+            <li><a href="#stalls">Angle of attack and stalls</a></li>
+            <li><a href="#stability">Stability</a></li>
+            <li><a href="#density">Density altitude and performance</a></li>
+            <li><a href="#battery">Batteries and endurance</a></li>
+            <li><a href="#data">Determining performance</a></li>
+            <li><a href="#tips">Test tips</a></li>
+          </ol>
+        </aside>
+        <div class="prose">
+          <h2 id="forces">The four forces</h2>
+          <p>Lift opposes weight; thrust opposes drag. In steady flight they balance. A fixed-wing aircraft gets lift from its wing; a multirotor gets it from its propellers, which is why a multirotor tilts to move: tilting the thrust vector produces a horizontal component.</p>
+          <p>Lift depends on air density, airspeed squared, wing (or rotor disk) area, and angle of attack. Anything that reduces density or demands more lift costs power.</p>
+
+          <h2 id="weight">Weight and balance</h2>
+          <p>The <strong>center of gravity (CG)</strong> is the point where the aircraft would balance. Manufacturers define a range of acceptable CG positions and a maximum takeoff weight. Both are easy to violate with a drone: a bigger battery, a camera on a longer gimbal, a payload hung off one side, prop guards, a Remote ID module, or a light bar all add weight and may move the CG.</p>
+          <ul>
+            <li><strong>Overweight:</strong> more thrust needed, so higher current draw, shorter endurance, slower climb, less margin against wind and gusts, and more stress on motors and arms.</li>
+            <li><strong>CG off center on a multirotor:</strong> the flight controller levels the aircraft by running the motors on the heavy side harder. That works until it does not: endurance drops and a gust can exceed the remaining authority.</li>
+            <li><strong>Forward CG on a fixed wing:</strong> nose heavy, more stable, but the tail must push down harder, adding drag and raising stall speed.</li>
+            <li><strong>Aft CG on a fixed wing:</strong> less stable, more sensitive controls, harder stall recovery. Beyond the limit, possibly unrecoverable.</li>
+            <li><strong>Shifting payload:</strong> a package that slides in flight moves the CG in flight. 107.49 requires the remote PIC to verify that any object carried is secure and does not affect controllability.</li>
+          </ul>
+          <p>Compute takeoff weight by adding everything: airframe, battery, payload, and accessories. Weigh it on a kitchen scale rather than trusting spec sheets. The same total must stay under 55 lb to remain a small unmanned aircraft under Part 107, and under 0.55 lb to qualify for Category 1 operations over people.</p>
+
+          <h2 id="loadfactor">Load factor and turns</h2>
+          <p><strong>Load factor</strong> is the ratio of the load the wings or rotors are supporting to the actual weight of the aircraft, expressed in Gs. In straight and level flight it is 1. In a level turn the lift must support the weight and also pull the aircraft around the turn, so load factor rises with bank angle:</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Bank angle</th><th>Load factor</th><th>Stall speed increase (fixed wing)</th></tr></thead>
+              <tbody>
+                <tr><td>0°</td><td>1.0 G</td><td>none</td></tr>
+                <tr><td>30°</td><td>1.15 G</td><td>about 7 percent</td></tr>
+                <tr><td>45°</td><td>1.41 G</td><td>about 19 percent</td></tr>
+                <tr><td>60°</td><td>2.0 G</td><td>about 41 percent</td></tr>
+                <tr><td>75°</td><td>3.9 G</td><td>about 97 percent</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Load factor equals 1 divided by the cosine of the bank angle. Stall speed rises with the square root of the load factor. Gusts and abrupt pull-ups also raise it. The FAA testing supplement includes a load factor chart; expect a question that asks you to read it.</p>
+
+          <h2 id="stalls">Angle of attack and stalls</h2>
+          <p>The <strong>angle of attack</strong> is the angle between the wing's chord line and the relative wind. Lift increases with angle of attack until the <strong>critical angle of attack</strong>, where airflow separates from the upper surface and the wing stalls. A stall depends on angle of attack only: it can happen at any airspeed, in any attitude, at any power setting. Fast, steep, or heavy flight raises the speed at which the critical angle is reached.</p>
+          <p>Recovery: reduce the angle of attack (lower the nose), then add power to minimize altitude loss. Multirotors do not stall in the fixed-wing sense, but they have an equivalent: ask for more thrust than the motors can give (heavy, hot, high, or a steep descent into your own downwash) and the aircraft settles.</p>
+
+          <h2 id="stability">Stability</h2>
+          <ul>
+            <li><strong>Positive static stability:</strong> after a disturbance the aircraft tends to return toward its original attitude.</li>
+            <li><strong>Neutral:</strong> it stays in the new attitude.</li>
+            <li><strong>Negative:</strong> it keeps diverging.</li>
+            <li><strong>Dynamic stability</strong> describes what happens over time: oscillations that damp out (positive), stay the same (neutral), or grow (negative).</li>
+          </ul>
+          <p>Most multirotors are aerodynamically unstable and rely entirely on the flight controller. Lose the controller's sensors (a GPS loss drops most aircraft to attitude mode) and the aircraft stays level but drifts with the wind.</p>
+
+          <h2 id="density">Density altitude and performance</h2>
+          <p>High temperature, high elevation, high humidity, and low pressure all make the air less dense. Propellers produce less thrust, wings produce less lift, and combustion engines produce less power. For a multirotor the practical effects are a lower maximum takeoff weight, slower climbs, hotter motors, and shorter flights. On a summer afternoon at a mountain site, a quadcopter rated for 30 minutes at sea level may do 20.</p>
+          <p>Wind adds to the load: holding position in a 20 knot breeze is flying at 20 knots. Battery drain climbs steeply with wind speed, and a return flight into the wind takes longer than the trip out.</p>
+
+          <h2 id="battery">Batteries and endurance</h2>
+          <ul>
+            <li>Lithium polymer and lithium-ion packs lose usable capacity when cold, age faster when hot, and are damaged by over-discharge. Land with a reserve (20 to 25 percent is a common rule), and treat the manufacturer's warning levels as limits, not targets.</li>
+            <li>A pack's voltage sags under heavy load. Aggressive flying, heavy payloads, and cold all deepen the sag, which is why a battery can show plenty of charge and still trigger a low-voltage landing.</li>
+            <li>Endurance figures from the manufacturer assume a light aircraft, still air, and a new battery. Log your own flights and use your numbers.</li>
+            <li>Inspect packs before every flight: swelling, dents, damaged connectors, or heat after charging mean the pack is retired.</li>
+          </ul>
+
+          <h2 id="data">Determining performance</h2>
+          <p>107.73 lists "determining the performance of small unmanned aircraft" as a knowledge area. In practice it means: start with the manufacturer's documentation (maximum takeoff weight, wind limits, temperature range, endurance), understand how your conditions differ from the ones those numbers assume, and verify with test flights and a log. A preflight performance check is part of the 107.49 assessment: do you have enough power for the planned operation with a reserve, given this weight, this wind, and this temperature?</p>
+
+          <h2 id="tips">Test tips for loading and performance questions</h2>
+          <ul>
+            <li>Weight goes up: performance goes down. Density altitude goes up: performance goes down. Those two sentences answer most questions.</li>
+            <li>Know 2 G at 60° of bank and roughly 1.4 G at 45°.</li>
+            <li>A stall is about angle of attack, not speed. Any answer that says "a stall only happens at low speed" is wrong.</li>
+            <li>Forward CG: stable but less efficient. Aft CG: unstable.</li>
+          </ul>
+          <p><a class="btn btn-primary" href="exam.html?topic=loading">Quiz this module</a> <a class="btn btn-secondary" href="study-operations.html">Next: Operations</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <p><strong>Part 107 Prep</strong> is a free, independent study resource. It is not affiliated with or endorsed by the FAA. Regulations change: before you fly, confirm every rule against the current 14 CFR Part 107 and FAA guidance.</p>
+      <p class="reviewed">Content reviewed October 2026. Found an error? Open an issue on the GitHub repository.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="process.html">The process</a>
+      <a href="study.html">Study guide</a>
+      <a href="regulations.html">Regulations</a>
+      <a href="safety.html">Safety</a>
+      <a href="exam.html">Practice exam</a>
+      <a href="resources.html">Resources</a>
+    </nav>
+  </div>
+</footer>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

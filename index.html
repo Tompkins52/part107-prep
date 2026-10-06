@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Part 107 Prep: free study guide and practice exams for the FAA remote pilot test</title>
+<meta name="description" content="Free study site for the FAA Part 107 remote pilot certificate: the certification process, regulations in plain English, airspace, weather, safety, and timed practice exams that score like the real UAG test.">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<canvas id="chart-bg" aria-hidden="true"></canvas>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="24" fill="none" stroke="#5d96f5" stroke-width="2.5" stroke-dasharray="6 4"/><g stroke="#f3ead7" stroke-width="3.5" stroke-linecap="round"><line x1="20" y1="20" x2="44" y2="44"/><line x1="20" y1="44" x2="44" y2="20"/></g><g fill="none" stroke="#f3ead7" stroke-width="2.5"><circle cx="20" cy="20" r="6"/><circle cx="44" cy="20" r="6"/><circle cx="20" cy="44" r="6"/><circle cx="44" cy="44" r="6"/></g><circle cx="32" cy="32" r="5" fill="#ffb02e"/></svg>
+      <span>Part 107 Prep<small>Remote pilot study site</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href="process.html">The process</a>
+      <a href="study.html">Study guide</a>
+      <a href="regulations.html">Regulations</a>
+      <a href="safety.html">Safety</a>
+      <a href="resources.html">Resources</a>
+      <a class="nav-cta" href="exam.html">Practice exam</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Pass the Part 107 knowledge test.</h1>
+        <p class="lede">Everything you need for the FAA remote pilot certificate in one place: how the certification process works, the regulations in plain English, the airspace and weather you will be tested on, and timed practice exams that score the way the real test does.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="exam.html">Take a practice exam</a>
+          <a class="btn btn-secondary btn-lg" href="process.html">See the process</a>
+        </div>
+      </div>
+      <div class="data-block" aria-label="Test at a glance">
+        <div class="db-title">Unmanned Aircraft General, Small (UAG)</div>
+        <dl>
+          <dt>Questions</dt><dd>60 <span>multiple choice, three options each</span></dd>
+          <dt>Time</dt><dd>2 hours</dd>
+          <dt>To pass</dt><dd>70% <span>42 of 60 correct</span></dd>
+          <dt>Fee</dt><dd>$175 <span>paid to PSI when you schedule</span></dd>
+          <dt>Minimum age</dt><dd>16</dd>
+          <dt>Stay current</dt><dd>24 mo <span>free online recurrent training</span></dd>
+        </dl>
+        <div class="db-foot">Figures verified against FAA and PSI sources, October 2026.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Where to start</h2>
+        <p>The test is not hard, but it is wide. Most people who fail did not expect sectional charts, METARs, and Class E airspace to be on a drone test. Pick the path that matches where you are.</p>
+      </div>
+      <div class="grid grid-3">
+        <a class="path" href="process.html">
+          <h3>New to drones and aviation</h3>
+          <p>Start with how certification works, then read the five study modules in order. Budget two to three weeks of evenings.</p>
+          <span class="go">Start with the process</span>
+        </a>
+        <a class="path" href="study-airspace.html">
+          <h3>I already fly, I need the aviation side</h3>
+          <p>Airspace and chart reading, then weather. Those two areas are where experienced hobbyists lose the most points.</p>
+          <span class="go">Open the airspace module</span>
+        </a>
+        <a class="path" href="exam.html?mode=full">
+          <h3>My test is this week</h3>
+          <p>Take a full 60-question timed exam, review every missed question, then drill the weak category with a topic quiz.</p>
+          <span class="go">Start a timed exam</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What the test covers</h2>
+        <p>The FAA publishes the weighting of each knowledge area on the UAG test. Operations is the biggest slice, but it is also the most intuitive. Airspace and regulations are where memorization pays off.</p>
+      </div>
+      <ul class="weights">
+        <li><a href="study-regulations.html">Regulations</a><div class="bar"><span class="w-reg" style="width:40%"></span></div><span class="pct">15 to 25%</span></li>
+        <li><a href="study-airspace.html">Airspace and charts</a><div class="bar"><span class="w-air" style="width:40%"></span></div><span class="pct">15 to 25%</span></li>
+        <li><a href="study-weather.html">Weather</a><div class="bar"><span class="w-wx" style="width:27%"></span></div><span class="pct">11 to 16%</span></li>
+        <li><a href="study-performance.html">Loading and performance</a><div class="bar"><span class="w-load" style="width:18%"></span></div><span class="pct">7 to 11%</span></li>
+        <li><a href="study-operations.html">Operations</a><div class="bar"><span class="w-ops" style="width:80%"></span></div><span class="pct">35 to 45%</span></li>
+      </ul>
+      <p style="margin-top:18px;color:var(--muted)">The practice exam draws questions in these same proportions: 12 regulations, 12 airspace, 8 weather, 5 loading and performance, 23 operations.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="grid grid-2">
+        <div class="panel">
+          <h3>What you get here</h3>
+          <ul>
+            <li>A step-by-step guide to the certification process, from your FAA Tracking Number to the plastic card in the mail.</li>
+            <li>Five study modules matched to the FAA's knowledge areas, with key-fact boxes and test tips.</li>
+            <li>A section-by-section cheat sheet of 14 CFR Part 107, plus Remote ID and registration.</li>
+            <li>A practice sectional chart you can read the way the test expects.</li>
+            <li>More than 200 original practice questions, every one with an explanation and a reference.</li>
+            <li>Full timed exams, quick checks, topic quizzes, and a score history kept on your own device.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>What has changed lately</h3>
+          <ul>
+            <li><strong>Remote ID</strong> has been required on registered aircraft since September 2023, with enforcement since March 2024.</li>
+            <li><strong>Night operations and operations over people</strong> have been allowed without a waiver since April 2021 when the aircraft and pilot meet the new rules. The old recurrent test became free online training at the same time.</li>
+            <li><strong>Part 108</strong>, the proposed rule for routine beyond visual line of sight flying, reached final White House review in July 2026. It is a separate framework for automated operations. Part 107 itself is unchanged.</li>
+          </ul>
+          <p class="reviewed" style="margin-bottom:0">Reviewed October 2026. See the <a href="resources.html">resources page</a> for the official sources.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="panel" style="display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between">
+        <div>
+          <h3 style="margin-bottom:4px">Not sure how ready you are?</h3>
+          <p style="margin:0;color:var(--muted)">A 20-question quick check takes about ten minutes and shows you a category breakdown.</p>
+        </div>
+        <a class="btn btn-primary btn-lg" href="exam.html">Start a quick check</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <p><strong>Part 107 Prep</strong> is a free, independent study resource. It is not affiliated with or endorsed by the FAA. Regulations change: before you fly, confirm every rule against the current 14 CFR Part 107 and FAA guidance.</p>
+      <p class="reviewed">Content reviewed October 2026. Found an error? Open an issue on the GitHub repository.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="process.html">The process</a>
+      <a href="study.html">Study guide</a>
+      <a href="regulations.html">Regulations</a>
+      <a href="safety.html">Safety</a>
+      <a href="exam.html">Practice exam</a>
+      <a href="resources.html">Resources</a>
+    </nav>
+  </div>
+</footer>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

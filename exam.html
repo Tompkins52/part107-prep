@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Practice exam | Part 107 Prep</title>
+<meta name="description" content="Free Part 107 practice exams: a full 60-question timed exam, quick checks, and topic quizzes with scoring, category breakdown, and explanations.">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<canvas id="chart-bg" aria-hidden="true"></canvas>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="24" fill="none" stroke="#5d96f5" stroke-width="2.5" stroke-dasharray="6 4"/><g stroke="#f3ead7" stroke-width="3.5" stroke-linecap="round"><line x1="20" y1="20" x2="44" y2="44"/><line x1="20" y1="44" x2="44" y2="20"/></g><g fill="none" stroke="#f3ead7" stroke-width="2.5"><circle cx="20" cy="20" r="6"/><circle cx="44" cy="20" r="6"/><circle cx="20" cy="44" r="6"/><circle cx="44" cy="44" r="6"/></g><circle cx="32" cy="32" r="5" fill="#ffb02e"/></svg>
+      <span>Part 107 Prep<small>Remote pilot study site</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href="process.html">The process</a>
+      <a href="study.html">Study guide</a>
+      <a href="regulations.html">Regulations</a>
+      <a href="safety.html">Safety</a>
+      <a href="resources.html">Resources</a>
+      <a class="nav-cta" href="exam.html">Practice exam</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="section-tight">
+    <div class="wrap exam-shell">
+
+      <div id="view-start">
+        <div class="section-head">
+          <p class="kicker">Practice exam</p>
+          <h1>Practice the way the test works</h1>
+          <p>Three answer choices, one correct, scored at 70 percent, with a category breakdown and an explanation for every question. Answer order is shuffled every time. Your scores stay on this device only.</p>
+        </div>
+        <div class="mode-grid">
+          <button type="button" class="mode" id="mode-full">
+            <h3>Full practice exam</h3>
+            <span class="mode-spec">60 questions, 2 hour timer</span>
+            <p>Weighted like the real UAG test: 12 regulations, 12 airspace, 8 weather, 5 loading, 23 operations. Flag questions and review before you finish.</p>
+          </button>
+          <button type="button" class="mode" id="mode-quick">
+            <h3>Quick check</h3>
+            <span class="mode-spec">20 questions, untimed</span>
+            <p>Ten minutes to see where you stand. Same category mix, shorter.</p>
+          </button>
+          <div class="mode" role="group" aria-labelledby="topic-heading">
+            <h3 id="topic-heading">Topic quiz</h3>
+            <span class="mode-spec">15 questions, untimed</span>
+            <p>Drill one knowledge area.</p>
+            <label class="visually-hidden" for="topic-select">Topic</label>
+            <select id="topic-select"></select>
+            <button type="button" class="btn btn-blue" id="mode-topic" style="margin-top:8px">Start topic quiz</button>
+          </div>
+        </div>
+        <div class="opts">
+          <label><input type="checkbox" id="opt-study"> Show the answer and explanation after each question (study mode)</label>
+        </div>
+        <p style="margin-top:16px;color:var(--muted);font-size:0.95rem">Keyboard: 1, 2, 3 or A, B, C to answer; left and right arrows to move; F to flag.</p>
+        <div class="history" id="history"></div>
+      </div>
+
+      <div id="view-exam" hidden>
+        <div class="exam-top">
+          <span class="counter" id="counter">Question 1 of 60</span>
+          <div class="progress" aria-hidden="true"><span id="progress-bar" style="width:0%"></span></div>
+          <span class="timer" id="timer" role="timer" aria-live="off" hidden>2:00:00</span>
+          <span class="chip" id="exam-title">Full practice exam</span>
+        </div>
+        <div class="qcard" id="qcard" aria-live="polite"></div>
+        <div class="exam-nav">
+          <button type="button" class="btn btn-secondary" id="btn-prev">Previous</button>
+          <button type="button" class="btn btn-blue" id="btn-next">Next</button>
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-ghost" id="btn-quit">Quit</button>
+          <button type="button" class="btn btn-primary" id="btn-finish">Finish and score</button>
+        </div>
+        <details class="navbox">
+          <summary>Question navigator</summary>
+          <div class="qgrid" id="qgrid"></div>
+          <p style="margin:10px 0 0;color:var(--faint);font-size:0.88rem">Blue: answered. Amber underline: flagged. Outlined: current.</p>
+        </details>
+      </div>
+
+      <div id="view-results" hidden>
+        <div class="section-head">
+          <p class="kicker">Results</p>
+          <h1>Your score</h1>
+        </div>
+        <div class="panel">
+          <div class="result-head" id="result-head"></div>
+          <ul class="cat-bars" id="cat-bars"></ul>
+          <div class="exam-nav" style="margin-top:24px">
+            <button type="button" class="btn btn-primary" id="btn-retake-missed">Retake missed questions</button>
+            <button type="button" class="btn btn-secondary" id="btn-new">New exam</button>
+          </div>
+        </div>
+        <div class="review-filter">
+          <span class="label">Review:</span>
+          <button type="button" class="btn btn-sm btn-secondary" data-filter="all" aria-pressed="true">All questions</button>
+          <button type="button" class="btn btn-sm btn-secondary" data-filter="missed" aria-pressed="false">Missed only</button>
+          <button type="button" class="btn btn-sm btn-secondary" data-filter="flagged" aria-pressed="false">Flagged only</button>
+        </div>
+        <div id="review-list"></div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <p><strong>Part 107 Prep</strong> is a free, independent study resource. It is not affiliated with or endorsed by the FAA. Regulations change: before you fly, confirm every rule against the current 14 CFR Part 107 and FAA guidance.</p>
+      <p class="reviewed">Content reviewed October 2026. Found an error? Open an issue on the GitHub repository.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="process.html">The process</a>
+      <a href="study.html">Study guide</a>
+      <a href="regulations.html">Regulations</a>
+      <a href="safety.html">Safety</a>
+      <a href="exam.html">Practice exam</a>
+      <a href="resources.html">Resources</a>
+    </nav>
+  </div>
+</footer>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/bank.js"></script>
+<script src="assets/js/exam.js"></script>
+</body>
+</html>

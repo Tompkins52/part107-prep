@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weather module | Part 107 Prep</title>
+<meta name="description" content="Study module: METARs, TAFs, stability, fronts, thunderstorms, fog, wind shear, density altitude, and the Part 107 weather minimums.">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<canvas id="chart-bg" aria-hidden="true"></canvas>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="24" fill="none" stroke="#5d96f5" stroke-width="2.5" stroke-dasharray="6 4"/><g stroke="#f3ead7" stroke-width="3.5" stroke-linecap="round"><line x1="20" y1="20" x2="44" y2="44"/><line x1="20" y1="44" x2="44" y2="20"/></g><g fill="none" stroke="#f3ead7" stroke-width="2.5"><circle cx="20" cy="20" r="6"/><circle cx="44" cy="20" r="6"/><circle cx="20" cy="44" r="6"/><circle cx="44" cy="44" r="6"/></g><circle cx="32" cy="32" r="5" fill="#ffb02e"/></svg>
+      <span>Part 107 Prep<small>Remote pilot study site</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href="process.html">The process</a>
+      <a href="study.html">Study guide</a>
+      <a href="regulations.html">Regulations</a>
+      <a href="safety.html">Safety</a>
+      <a href="resources.html">Resources</a>
+      <a class="nav-cta" href="exam.html">Practice exam</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Study module 3 of 5</p>
+        <h1>Weather</h1>
+        <p>The weather questions are half decoding (reading a METAR or TAF) and half theory (what stable air does, what a cold front brings). Both halves reward memorizing a small set of patterns.</p>
+      </div>
+      <div class="article">
+        <aside class="toc" aria-label="On this page">
+          <div class="toc-title">On this page</div>
+          <ol>
+            <li><a href="#minimums">Part 107 minimums</a></li>
+            <li><a href="#metar">Decoding a METAR</a></li>
+            <li><a href="#taf">Decoding a TAF</a></li>
+            <li><a href="#products">Other products</a></li>
+            <li><a href="#atmosphere">The atmosphere</a></li>
+            <li><a href="#stability">Stable vs unstable air</a></li>
+            <li><a href="#clouds">Clouds and fog</a></li>
+            <li><a href="#fronts">Fronts</a></li>
+            <li><a href="#storms">Thunderstorms</a></li>
+            <li><a href="#wind">Wind and wind shear</a></li>
+            <li><a href="#density">Density altitude</a></li>
+            <li><a href="#tips">Test tips</a></li>
+          </ol>
+        </aside>
+        <div class="prose">
+          <h2 id="minimums">The Part 107 weather minimums</h2>
+          <ul class="facts">
+            <li><b>3 sm</b><span>minimum visibility from the control station</span></li>
+            <li><b>500 ft</b><span>below clouds</span></li>
+            <li><b>2,000 ft</b><span>horizontally from clouds</span></li>
+            <li><b>900 ft AGL</b><span>the lowest ceiling that lets you fly at 400 ft legally</span></li>
+          </ul>
+          <p>That last number is a derived one: 400 ft of altitude plus 500 ft of cloud clearance. A METAR reporting BKN008 (broken at 800 ft) grounds a 400 ft flight.</p>
+
+          <h2 id="metar">Decoding a METAR</h2>
+          <p>A METAR is an hourly observation. Read this one left to right:</p>
+          <pre>KRVN 151953Z 27015G24KT 10SM SCT035 BKN050 24/09 A2998 RMK AO2</pre>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th class="mono">Group</th><th>Meaning</th></tr></thead>
+              <tbody>
+                <tr><td class="mono">KRVN</td><td>Station identifier. U.S. airports start with K.</td></tr>
+                <tr><td class="mono">151953Z</td><td>Day 15 of the month, 1953 UTC. Z means Zulu (UTC). Central Daylight Time is UTC minus 5, so this is 2:53 PM CDT.</td></tr>
+                <tr><td class="mono">27015G24KT</td><td>Wind from 270° true at 15 knots, gusting to 24. VRB means variable direction (light winds). 00000KT is calm. A group like 240V300 after the wind shows the direction varying between 240° and 300°.</td></tr>
+                <tr><td class="mono">10SM</td><td>Visibility 10 statute miles. Fractions are possible: 1 1/2SM. In TAFs, P6SM means more than 6 miles.</td></tr>
+                <tr><td class="mono">SCT035 BKN050</td><td>Scattered clouds at 3,500 ft AGL, broken at 5,000 ft AGL. Heights are in hundreds of feet above ground. The broken layer is the ceiling.</td></tr>
+                <tr><td class="mono">24/09</td><td>Temperature 24 °C, dew point 9 °C. M05 would mean minus 5.</td></tr>
+                <tr><td class="mono">A2998</td><td>Altimeter setting 29.98 inches of mercury.</td></tr>
+                <tr><td class="mono">RMK AO2</td><td>Remarks. AO2 means an automated station with a precipitation sensor.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>Sky cover:</strong> SKC or CLR (clear), FEW (1/8 to 2/8), SCT (3/8 to 4/8), BKN (5/8 to 7/8), OVC (8/8). A <strong>ceiling</strong> is the lowest broken or overcast layer, or the vertical visibility (VV) into fog or precipitation. A layer with CB (cumulonimbus) or TCU (towering cumulus) appended means thunderstorms.</p>
+          <p><strong>Weather codes</strong> go between visibility and clouds: RA rain, SN snow, DZ drizzle, TS thunderstorm, SH showers, FG fog (visibility below 5/8 mile), BR mist, HZ haze, FZ freezing, GR hail. A minus sign is light, no sign is moderate, a plus is heavy: -RA, RA, +RA. SPECI in place of METAR means a special, off-schedule observation because conditions changed significantly.</p>
+
+          <h2 id="taf">Decoding a TAF</h2>
+          <p>A Terminal Aerodrome Forecast covers the area within 5 statute miles of an airport, usually for 24 or 30 hours, in METAR-style code with time groups:</p>
+          <pre>TAF KRVN 151720Z 1518/1618 27012KT P6SM SCT040
+     FM160200 30006KT P6SM SKC
+     TEMPO 1610/1613 4SM BR
+     FM161500 22010G18KT P6SM BKN030</pre>
+          <ul>
+            <li><strong>151720Z</strong> issued on the 15th at 1720Z; <strong>1518/1618</strong> valid from the 15th at 1800Z to the 16th at 1800Z.</li>
+            <li><strong>FM</strong> (from) begins a new period with a complete change: FM160200 means from the 16th at 0200Z.</li>
+            <li><strong>TEMPO</strong> describes temporary fluctuations lasting less than an hour at a time within the period shown: between 1000Z and 1300Z, expect brief periods of 4 miles in mist.</li>
+            <li><strong>BECMG</strong> (becoming) is a gradual change over the time range; <strong>PROB30</strong> is a 30 percent probability.</li>
+            <li><strong>P6SM</strong> is visibility greater than 6 statute miles; <strong>SKC</strong> is sky clear.</li>
+          </ul>
+
+          <h2 id="products">Other weather products</h2>
+          <ul>
+            <li><strong>PIREPs (UA, or UUA for urgent)</strong> are reports from pilots in flight: the only source of actual turbulence, icing, and cloud-top information.</li>
+            <li><strong>SIGMETs</strong> warn of weather hazardous to all aircraft: severe turbulence, severe icing, dust or sand storms, volcanic ash. <strong>Convective SIGMETs</strong> cover thunderstorms. <strong>AIRMETs</strong> (now issued graphically as G-AIRMETs) cover moderate conditions: Sierra for IFR conditions and mountain obscuration, Tango for turbulence and surface winds over 30 knots, Zulu for icing.</li>
+            <li><strong>Winds and temperatures aloft (FB)</strong> forecast winds at 3,000 ft and above. Not directly useful at 400 ft, but they show whether winds strengthen with height.</li>
+            <li><strong>Graphical Forecasts for Aviation (GFA)</strong> on aviationweather.gov replaced the old text area forecasts and are the easiest way to see the big picture.</li>
+            <li><strong>Flight Service</strong> at 1-800-WX-BRIEF provides a standard briefing, including TFRs.</li>
+          </ul>
+
+          <h2 id="atmosphere">The atmosphere in six facts</h2>
+          <ul>
+            <li>Standard sea-level conditions: <strong>15 °C (59 °F) and 29.92 inHg</strong> (1013.2 hPa).</li>
+            <li>Temperature falls about <strong>2 °C per 1,000 ft</strong> (the standard lapse rate); pressure falls about 1 inHg per 1,000 ft in the lower atmosphere.</li>
+            <li>Warm air is less dense than cold air; humid air is less dense than dry air; low pressure means less dense air. All three reduce aircraft performance.</li>
+            <li>The <strong>dew point</strong> is the temperature at which air becomes saturated. When temperature and dew point meet, you get clouds, fog, or dew. A spread of 2 °C or less with a falling temperature is a fog warning.</li>
+            <li>Most weather happens in the <strong>troposphere</strong>, which extends to roughly 36,000 ft at mid latitudes.</li>
+            <li>Uneven heating of the Earth's surface drives everything: pressure differences, wind, convection, and the water cycle.</li>
+          </ul>
+
+          <h2 id="stability">Stable versus unstable air</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Stable air</th><th>Unstable air</th></tr></thead>
+              <tbody>
+                <tr><td>Resists vertical motion</td><td>Rises freely once lifted</td></tr>
+                <tr><td>Stratiform (layered) clouds</td><td>Cumuliform (lumpy, towering) clouds</td></tr>
+                <tr><td>Steady precipitation</td><td>Showery precipitation</td></tr>
+                <tr><td>Smooth air</td><td>Turbulence</td></tr>
+                <tr><td>Poor visibility (haze, smoke, fog trapped near the ground)</td><td>Good visibility (vertical mixing clears the air)</td></tr>
+                <tr><td>Often under a temperature inversion</td><td>Often on hot afternoons or behind a cold front</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>A <strong>temperature inversion</strong>, where temperature increases with height, is the most stable condition of all. It traps haze and smoke, gives smooth air, and can hide a sharp wind shear between calm surface air and moving air above. Inversions form on clear, calm nights as the ground cools.</p>
+          <div class="callout callout-tip">
+            <span class="callout-title">Test tip</span>
+            <p>If a question describes smooth air with poor visibility, the answer involves stable air or an inversion. Turbulence with good visibility and showers means unstable air. The test rarely asks anything subtler than this table.</p>
+          </div>
+
+          <h2 id="clouds">Clouds and fog</h2>
+          <p>Clouds are grouped by height: <strong>low</strong> (stratus, stratocumulus, nimbostratus, up to about 6,500 ft), <strong>middle</strong> (altostratus, altocumulus, 6,500 to 20,000 ft), <strong>high</strong> (cirrus, cirrostratus, cirrocumulus, above 20,000 ft, made of ice), and <strong>vertical development</strong> (towering cumulus, cumulonimbus). For a drone pilot the important ones are the low clouds that set your ceiling and the vertically developed ones that mean turbulence, downdrafts, and lightning. <strong>Lenticular</strong> clouds near mountains mark mountain wave turbulence even though they look stationary.</p>
+          <p><strong>Fog</strong> is a cloud at the surface, and it is the weather most likely to catch you on a calm morning:</p>
+          <ul>
+            <li><strong>Radiation fog:</strong> clear, calm nights; the ground radiates heat away and the air above it cools to the dew point. Common in valleys and fields, burns off after sunrise.</li>
+            <li><strong>Advection fog:</strong> moist air moves (is advected) over a colder surface such as cold water or snow. Needs wind; common on coasts; can persist for days.</li>
+            <li><strong>Upslope fog:</strong> moist air cools as it is pushed up terrain.</li>
+            <li><strong>Steam fog:</strong> cold air over warm water, common over lakes in fall.</li>
+            <li><strong>Precipitation-induced (frontal) fog:</strong> warm rain falling through cool air ahead of a warm front.</li>
+          </ul>
+
+          <h2 id="fronts">Fronts</h2>
+          <p>A front is the boundary between two air masses. The test wants the contrast between the two common ones:</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Cold front</th><th>Warm front</th></tr></thead>
+              <tbody>
+                <tr><td>Cold air pushes under warm air; steep slope, moves fast</td><td>Warm air slides over cold air; shallow slope, moves slowly</td></tr>
+                <tr><td>Narrow band of towering cumulus, thunderstorms, heavy showers</td><td>Wide area of stratus, drizzle, fog, low ceilings, poor visibility ahead of the front</td></tr>
+                <tr><td>Abrupt wind shift, pressure rises after passage</td><td>Gradual changes</td></tr>
+                <tr><td>Clearing, cooler, gusty air behind it</td><td>Warmer, humid air behind it</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>An <strong>occluded front</strong> forms when a fast cold front overtakes a warm front and can combine the worst of both. A <strong>stationary front</strong> stalls and can bring days of the same weather. Squall lines, which are bands of severe thunderstorms, often form well ahead of a fast-moving cold front.</p>
+
+          <h2 id="storms">Thunderstorms</h2>
+          <p>Three ingredients: <strong>moisture, unstable air, and a lifting action</strong> (heating, terrain, or a front). Three stages:</p>
+          <ol>
+            <li><strong>Cumulus stage:</strong> updrafts build the cloud. Updrafts can exceed 3,000 ft per minute.</li>
+            <li><strong>Mature stage:</strong> precipitation reaches the surface, downdrafts begin alongside the updrafts. The most violent stage: heavy rain, hail, lightning, wind shear, microbursts, and gust fronts that race ahead of the storm.</li>
+            <li><strong>Dissipating stage:</strong> downdrafts dominate and the storm collapses.</li>
+          </ol>
+          <p>Hazards extend well beyond the cloud: lightning can strike 10 miles from rain, and the outflow gust front can knock a small aircraft down minutes before a storm arrives. Manned pilots are told to stay 20 miles from severe storms; a drone has no business being airborne when a thunderstorm is anywhere near.</p>
+
+          <h2 id="wind">Wind and wind shear</h2>
+          <p>Wind flows from high to low pressure, deflected by the Coriolis force. Near the surface, friction slows it and bends it toward low pressure. Wind usually increases with altitude, even within your 400 ft: expect stronger wind at the top of a climb than at the launch point.</p>
+          <ul>
+            <li><strong>Sea breeze:</strong> during the day, land heats faster than water, air over land rises, and wind blows from the water onto the land. At night the <strong>land breeze</strong> reverses it.</li>
+            <li><strong>Mechanical turbulence:</strong> wind tumbling over buildings, trees, and terrain creates eddies that extend downwind. Launch upwind of obstacles, not in their wake.</li>
+            <li><strong>Convective turbulence:</strong> thermals rising from heated surfaces (parking lots, dark fields) on sunny afternoons.</li>
+            <li><strong>Wind shear:</strong> a sudden change in wind speed or direction over a short distance, horizontal or vertical. It can occur at any altitude and is most dangerous near thunderstorms, fronts, and temperature inversions, where a layer of still air sits under moving air. Low-level wind shear can overpower a small aircraft's ability to hold position.</li>
+            <li><strong>Microbursts:</strong> intense downdrafts from thunderstorms that spread out at the surface, producing shear in every direction.</li>
+          </ul>
+
+          <h2 id="density">Density altitude</h2>
+          <p><strong>Pressure altitude</strong> is the altitude in the standard atmosphere that matches the current pressure. <strong>Density altitude</strong> is pressure altitude corrected for temperature: the altitude at which the air density equals what you have now. Hot, high, humid, and low pressure all raise density altitude, and the aircraft performs as if it were at that higher altitude: less thrust, less lift, slower climb, longer takeoff roll for fixed wings, and shorter endurance for multirotors because the motors draw more current to hover.</p>
+          <p><strong>Temperature</strong> also hits the battery directly. Cold lithium batteries deliver less capacity and sag under load; warm them before flight and plan a larger reserve. Heat accelerates battery aging and can trigger thermal protection on controllers and cameras.</p>
+
+          <h2 id="tips">Test tips for weather questions</h2>
+          <ul>
+            <li>Practice decoding until every group in a METAR is automatic: time, wind, visibility, weather, clouds, temperature and dew point, altimeter. Expect at least one question that is pure decoding.</li>
+            <li>Convert Zulu time with your own offset (Central: UTC minus 5 in daylight time, minus 6 in standard time).</li>
+            <li>Learn the stable/unstable table and the cold/warm front table cold. Most theory questions come from them.</li>
+            <li>Density altitude is always about performance getting worse when it goes up.</li>
+          </ul>
+          <p><a class="btn btn-primary" href="exam.html?topic=weather">Quiz this module</a> <a class="btn btn-secondary" href="study-performance.html">Next: Loading and performance</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <p><strong>Part 107 Prep</strong> is a free, independent study resource. It is not affiliated with or endorsed by the FAA. Regulations change: before you fly, confirm every rule against the current 14 CFR Part 107 and FAA guidance.</p>
+      <p class="reviewed">Content reviewed October 2026. Found an error? Open an issue on the GitHub repository.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="process.html">The process</a>
+      <a href="study.html">Study guide</a>
+      <a href="regulations.html">Regulations</a>
+      <a href="safety.html">Safety</a>
+      <a href="exam.html">Practice exam</a>
+      <a href="resources.html">Resources</a>
+    </nav>
+  </div>
+</footer>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

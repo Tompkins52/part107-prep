@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Airspace and chart reading module | Part 107 Prep</title>
+<meta name="description" content="Study module: airspace classes, sectional chart symbols, special use airspace, TFRs, LAANC, and a practice chart to learn on.">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<canvas id="chart-bg" aria-hidden="true"></canvas>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="24" fill="none" stroke="#5d96f5" stroke-width="2.5" stroke-dasharray="6 4"/><g stroke="#f3ead7" stroke-width="3.5" stroke-linecap="round"><line x1="20" y1="20" x2="44" y2="44"/><line x1="20" y1="44" x2="44" y2="20"/></g><g fill="none" stroke="#f3ead7" stroke-width="2.5"><circle cx="20" cy="20" r="6"/><circle cx="44" cy="20" r="6"/><circle cx="20" cy="44" r="6"/><circle cx="44" cy="44" r="6"/></g><circle cx="32" cy="32" r="5" fill="#ffb02e"/></svg>
+      <span>Part 107 Prep<small>Remote pilot study site</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href="process.html">The process</a>
+      <a href="study.html">Study guide</a>
+      <a href="regulations.html">Regulations</a>
+      <a href="safety.html">Safety</a>
+      <a href="resources.html">Resources</a>
+      <a class="nav-cta" href="exam.html">Practice exam</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Study module 2 of 5</p>
+        <h1>Airspace and chart reading</h1>
+        <p>You will fly at 400 ft or lower, but the test expects you to read the same VFR sectional charts manned pilots use, because that is where controlled airspace, airports, obstacles, and special use areas are drawn. This is the module to spend extra time on.</p>
+      </div>
+      <div class="article">
+        <aside class="toc" aria-label="On this page">
+          <div class="toc-title">On this page</div>
+          <ol>
+            <li><a href="#classes">Airspace classes</a></li>
+            <li><a href="#chart">The practice chart</a></li>
+            <li><a href="#airport-data">Airport data blocks</a></li>
+            <li><a href="#obstacles">Obstacles, terrain, MEF</a></li>
+            <li><a href="#sua">Special use airspace</a></li>
+            <li><a href="#tfr">TFRs and NOTAMs</a></li>
+            <li><a href="#laanc">LAANC and facility maps</a></li>
+            <li><a href="#other">Other chart features</a></li>
+            <li><a href="#tips">Test tips</a></li>
+          </ol>
+        </aside>
+        <div class="prose">
+          <h2 id="classes">Airspace classes and what they mean for you</h2>
+          <p>Controlled airspace (Classes A through E) is where ATC provides services; uncontrolled airspace (Class G) is everything else. For a Part 107 pilot the only question that matters is whether 107.41 requires authorization: it does for Class B, C, D, and Class E surface areas, and it does not for Class G or for Class E that begins above the ground.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Class</th><th>Where</th><th>On the chart</th><th>Typical vertical limits</th><th>Part 107</th></tr></thead>
+              <tbody>
+                <tr><td>A</td><td>Everywhere above 18,000 ft MSL</td><td>Not depicted</td><td>18,000 ft MSL to FL600</td><td>Not reachable</td></tr>
+                <tr><td>B</td><td>The busiest airports (Chicago O'Hare, Atlanta, LAX)</td><td>Solid blue lines, layered like an upside-down wedding cake</td><td>Surface to about 10,000 ft MSL; outer shelves have higher floors</td><td>Authorization required</td></tr>
+                <tr><td>C</td><td>Busy airports with radar approach control</td><td>Solid magenta lines; 5 nm core, 10 nm shelf</td><td>Surface to about 4,000 ft above the airport</td><td>Authorization required</td></tr>
+                <tr><td>D</td><td>Airports with a control tower</td><td>Dashed blue line, ceiling in brackets such as [-31]</td><td>Surface to about 2,500 ft above the airport</td><td>Authorization required</td></tr>
+                <tr><td>E surface area</td><td>Some airports with instrument approaches</td><td>Dashed magenta line</td><td>From the surface</td><td>Authorization required</td></tr>
+                <tr><td>E at 700 ft</td><td>Around most airports with instrument approaches</td><td>Magenta vignette (shaded band), 700 ft floor on the soft side</td><td>700 ft AGL up to 18,000 ft</td><td>No authorization below 700 ft</td></tr>
+                <tr><td>E at 1,200 ft</td><td>Most of the rest of the country</td><td>No marking, or a blue vignette where the floor changes</td><td>1,200 ft AGL up to 18,000 ft</td><td>No authorization below 1,200 ft</td></tr>
+                <tr><td>G</td><td>Below the Class E floor, away from busy airports</td><td>Not depicted; it is the absence of other markings</td><td>Surface up to the Class E floor</td><td>No authorization, but 107.43 still applies near airports</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout">
+            <span class="callout-title">Key fact</span>
+            <p>Blue is for towered airports and the airspace that needs a tower (B, D). Magenta is for everything else (C is the exception: magenta but towered, because it is defined by radar service). Dashed lines start at the surface. Vignettes start in the air.</p>
+          </div>
+          <p><strong>When a part-time tower closes</strong> (a star after the CT frequency), the Class D typically becomes Class E surface area or Class G. The Chart Supplement says which. Authorization requirements follow whatever airspace is active at the time of your flight.</p>
+
+          <h2 id="chart">The practice chart</h2>
+          <p>This excerpt is fictional, but every symbol on it is drawn the way the real chart draws it. Tap to enlarge. Walk through it with the notes below, then expect to see it again in the practice exam.</p>
+          <figure>
+            <img class="zoomable" src="assets/img/practice-chart.svg" alt="Practice sectional chart excerpt showing Riverton Regional airport inside Class D airspace, Millbrook airport inside a Class E surface area, restricted area R-4071, the Badger MOA, a VOR, a Victor airway, obstacles, a private airport, a heliport, a parachute area, and maximum elevation figures" width="900" height="620">
+            <figcaption>Fictional practice chart, not for navigation. Tap to enlarge.</figcaption>
+          </figure>
+          <ol>
+            <li><strong>Riverton Regional (RVN)</strong> is drawn in blue with a runway layout, so it has a control tower and hard-surface runways. The dashed blue circle is Class D, and [-31] says the Class D ceiling is 3,100 ft MSL. Flying anywhere inside that circle, at any altitude, needs ATC authorization.</li>
+            <li>The <strong>magenta vignette</strong> around Riverton marks Class E with a 700 ft AGL floor on the shaded (inner) side. Below 700 ft you are in Class G, so a 400 ft flight at the farm southeast of the Class D ring needs no authorization.</li>
+            <li><strong>Millbrook (3K7)</strong> is magenta: no tower. The dashed magenta circle is a Class E surface area, which does require authorization.</li>
+            <li><strong>R-4071</strong> has a blue hatched border: a restricted area. <strong>Badger MOA</strong> has a magenta hatched border: a military operations area.</li>
+            <li>The <strong>obstacle</strong> southeast of the 88°30' line is 1,549 ft MSL and 1,049 ft AGL, so the ground there is about 500 ft MSL. The <strong>lighted obstacle group</strong> in the northeast has rays around the symbol and tops out at 2,349 ft MSL.</li>
+            <li>The large numbers with a small superscript are <strong>maximum elevation figures</strong>: the 2 with a small 5 means 2,500 ft MSL for that quadrangle.</li>
+            <li>The compass rose in the lower left is a <strong>VOR</strong> (Riverton, 114.2, RVN) and the light blue line leaving it is <strong>Victor airway V12</strong>, a Class E airway with a floor of 1,200 ft AGL.</li>
+            <li>The circle with an R is a <strong>private airport</strong>; the circle with an H is a <strong>heliport</strong>; the small parachute marks a <strong>parachute jumping area</strong>.</li>
+            <li>The dashed magenta line in the lower left labeled 3°W is an <strong>isogonic line</strong>: magnetic variation here is 3 degrees west.</li>
+            <li>The heavy black lines are <strong>latitude 42°00'N</strong> and <strong>longitude 88°30'W</strong>, with a tick every minute.</li>
+          </ol>
+
+          <h2 id="airport-data">Airport data blocks</h2>
+          <p>Next to every public airport is a block of text. Riverton's reads:</p>
+          <pre>RIVERTON RGNL (RVN)
+CT - 118.3 ★   ATIS 124.6
+612  *L 54  122.95 ©</pre>
+          <ul>
+            <li><strong>Name and identifier.</strong> Three-letter identifiers belong to larger airports; smaller fields have alphanumeric ones like 3K7.</li>
+            <li><strong>CT - 118.3 ★.</strong> Control tower frequency. The star means the tower is part time.</li>
+            <li><strong>ATIS 124.6.</strong> The recorded airport information broadcast.</li>
+            <li><strong>612.</strong> Field elevation in feet MSL. Add 400 to get your maximum MSL altitude over the field.</li>
+            <li><strong>*L.</strong> Runway lighting exists; the star means there are limitations (pilot-controlled, part-time, or on request). See the Chart Supplement.</li>
+            <li><strong>54.</strong> Longest runway in hundreds of feet: 5,400 ft.</li>
+            <li><strong>122.95 ©.</strong> The circled C marks the common traffic advisory frequency (CTAF), where pilots self-announce. At a towered field the CTAF is usually the tower frequency; here UNICOM 122.95 is used when the tower is closed.</li>
+          </ul>
+          <p>Millbrook's block adds <strong>RP 18</strong>: right-hand traffic pattern for runway 18. Standard patterns use left turns, so RP tells you which side of the runway low-flying traffic will be on. A <strong>NO SVFR</strong> note means special VFR is not available; a <strong>(Pvt)</strong> label means private.</p>
+          <p>Airport symbols: a plain circle is a field with runways shorter than 1,500 ft or soft surfaces; a circle with a runway layout inside means hard-surfaced runways of 1,500 to 8,069 ft; runway layouts drawn without a circle mean at least one runway longer than 8,069 ft. Small tick marks around a circle mean fuel and services are available during normal working hours.</p>
+
+          <h2 id="obstacles">Obstacles, terrain, and maximum elevation figures</h2>
+          <p>Obstacle symbols come with two numbers: the top in feet <strong>MSL</strong> in bold, and the height <strong>AGL</strong> in parentheses. Charts show obstacles 200 ft AGL and taller. Obstacles over 1,000 ft AGL use a taller symbol. A symbol with small rays is lighted. Two symbols close together with one set of numbers is a group obstacle. Remember that guyed towers have wires extending far out from the base, often invisible against the sky.</p>
+          <p><strong>Maximum elevation figures</strong> appear in every 30 minute quadrangle as a large number (thousands of feet) with a small superscript (hundreds). An MEF of 1<sup>7</sup> is 1,700 ft MSL: the highest terrain or obstacle in the box, rounded up with a margin. It tells you the general level of the land, which you need to convert a METAR cloud base or a chart altitude into something you can compare with 400 ft AGL.</p>
+          <p>Terrain is shown with contour lines and color tints that get browner with elevation. Spot elevations (a small dot with a number) mark the highest point in an area.</p>
+          <div class="callout callout-tip">
+            <span class="callout-title">Test tip</span>
+            <p>A favorite question: "What is the maximum altitude you may fly near obstacle X?" Subtract the AGL number from the MSL number to get the ground elevation, add 400. If the question says you will be within 400 ft of the obstacle, add 400 to the obstacle's MSL top instead.</p>
+          </div>
+
+          <h2 id="sua">Special use airspace</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Type</th><th>Label</th><th>Border</th><th>What it means for you</th></tr></thead>
+              <tbody>
+                <tr><td>Prohibited area</td><td>P-56</td><td>Blue hatched</td><td>Flight prohibited for national security. Permission required and rarely granted.</td></tr>
+                <tr><td>Restricted area</td><td>R-4071</td><td>Blue hatched</td><td>Invisible hazards such as gunnery or missiles. Permission from the controlling agency required when active. Hours and agency are in the chart margin tabulation and the Chart Supplement.</td></tr>
+                <tr><td>Warning area</td><td>W-237</td><td>Blue hatched</td><td>Same hazards as restricted, but over water from 3 nm offshore where the U.S. lacks sole jurisdiction.</td></tr>
+                <tr><td>Military operations area</td><td>BADGER MOA</td><td>Magenta hatched</td><td>Military training; separates military from IFR traffic. Not prohibited to you, but fast low traffic. Check activity and use extreme caution.</td></tr>
+                <tr><td>Alert area</td><td>A-211</td><td>Magenta hatched</td><td>High volume of pilot training or unusual activity. No permission needed; everyone is responsible for collision avoidance.</td></tr>
+                <tr><td>Controlled firing area</td><td>Not charted</td><td>Not charted</td><td>Activity stops when an aircraft approaches, so it is not depicted.</td></tr>
+                <tr><td>National security area</td><td>NSA</td><td>Broken magenta line</td><td>Voluntary avoidance; can become mandatory by NOTAM.</td></tr>
+                <tr><td>Military training route</td><td>IR1234, VR1234</td><td>Gray lines with arrows</td><td>High-speed military traffic. Four-digit numbers: segments at or below 1,500 ft AGL. Three digits: some segments above 1,500 ft.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="tfr">TFRs and NOTAMs</h2>
+          <p><strong>Temporary flight restrictions</strong> are issued by NOTAM for things that cannot be printed on a chart: presidential movements, wildfires, disasters, space launches, air shows, and sporting events. The stadium TFR is standing: 3 nautical miles and 3,000 ft AGL around stadiums seating 30,000 or more, from one hour before to one hour after MLB, NFL, NCAA Division I football, and major motor-sports events. Violating a TFR is a serious enforcement matter.</p>
+          <p>Check before every flight: <a href="https://tfr.faa.gov" rel="noopener">tfr.faa.gov</a>, the FAA NOTAM search, a Flight Service briefing at 1-800-WX-BRIEF, or an FAA-approved airspace app. The chart tells you where the permanent airspace is; NOTAMs tell you what has changed today.</p>
+
+          <h2 id="laanc">LAANC and UAS Facility Maps</h2>
+          <p><strong>LAANC</strong> (Low Altitude Authorization and Notification Capability) is how most Part 107 pilots get the authorization 107.41 requires. Through an FAA-approved service supplier's app you draw your operating area, enter a time window and altitude, and receive an automatic approval in near real time, provided the altitude is at or below the pre-approved ceiling in the <strong>UAS Facility Map</strong> grid for that spot.</p>
+          <p>Facility map grids show numbers such as 0, 50, 100, 200, 300, or 400: the maximum altitude ATC will auto-approve, in feet AGL. A 0 grid (typically on the extended runway centerlines) means no automatic approval; you may apply through FAADroneZone for further coordination, which is reviewed by hand. LAANC can also submit requests above the grid ceiling, up to 400 ft, for manual review. Authorizations are limited to the exact area, altitude, and time approved, and ATC can modify or cancel them at any time.</p>
+
+          <h2 id="other">Other features worth knowing</h2>
+          <ul>
+            <li><strong>Latitude and longitude.</strong> Lines every 30 minutes, ticks every minute. Latitude is north-south (horizontal lines), longitude is east-west (vertical lines). In the continental U.S. longitudes are west, so numbers increase to the left.</li>
+            <li><strong>VORs and airways.</strong> A VOR is a ground navigation station drawn with a compass rose oriented to magnetic north. Victor airways (V-numbers, light blue) connect them at 1,200 ft AGL and above.</li>
+            <li><strong>Isogonic lines.</strong> Dashed magenta lines showing magnetic variation. Runway numbers, ATC headings, and VOR radials are magnetic; the chart grid is true. Winds in written reports are true; winds from a tower or ATIS are magnetic.</li>
+            <li><strong>Mode C veil.</strong> A thin blue ring 30 nm around Class B airports. Manned aircraft need transponders inside it. It does not by itself require anything from a Part 107 pilot.</li>
+            <li><strong>Parks and refuges.</strong> National parks, wildlife refuges, and wilderness areas are outlined with a blue line and dots. Pilots are requested to stay 2,000 ft above them; drone takeoff and landing on National Park Service land is prohibited by the Park Service.</li>
+            <li><strong>Chart currency.</strong> Sectionals are revised every 56 days. Digital charts are free from the FAA.</li>
+            <li><strong>Chart Supplement.</strong> The companion book (formerly the Airport/Facility Directory) with airport hours, frequencies, runway details, parachute activity, and special use airspace contacts.</li>
+          </ul>
+
+          <h2 id="tips">Test tips for airspace questions</h2>
+          <ul>
+            <li>The real test uses figures from the Airman Knowledge Testing Supplement. Download it (free, on the <a href="resources.html">resources page</a>) and practice finding airports by latitude and longitude, reading data blocks, and identifying airspace by line style and color.</li>
+            <li>Ask yourself three questions about any point on a chart: What is the lowest airspace here? Does it start at the surface? Do I need authorization?</li>
+            <li>Bracketed numbers are Class D ceilings in MSL. Fractions on Class B and C shelves are ceiling over floor in hundreds of feet MSL. SFC means surface.</li>
+            <li>Do not confuse a MOA (caution) with a restricted area (permission) with a prohibited area (no).</li>
+          </ul>
+          <p><a class="btn btn-primary" href="exam.html?topic=airspace">Quiz this module</a> <a class="btn btn-secondary" href="study-weather.html">Next: Weather</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <p><strong>Part 107 Prep</strong> is a free, independent study resource. It is not affiliated with or endorsed by the FAA. Regulations change: before you fly, confirm every rule against the current 14 CFR Part 107 and FAA guidance.</p>
+      <p class="reviewed">Content reviewed October 2026. Found an error? Open an issue on the GitHub repository.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="process.html">The process</a>
+      <a href="study.html">Study guide</a>
+      <a href="regulations.html">Regulations</a>
+      <a href="safety.html">Safety</a>
+      <a href="exam.html">Practice exam</a>
+      <a href="resources.html">Resources</a>
+    </nav>
+  </div>
+</footer>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
