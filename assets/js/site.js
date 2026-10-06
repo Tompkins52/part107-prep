@@ -268,11 +268,16 @@
     ctx.restore();
   }
 
+  var lastFrame = 0;
   function frame(t) {
     if (!staticLayer) return;
-    ctx.clearRect(0, 0, W, H);
-    ctx.drawImage(staticLayer, 0, 0, W, H);
-    drawAircraft(t);
+    /* About 30 frames per second is plenty for a slow aircraft and a strobe */
+    if (t - lastFrame >= 32 || reduceMotion) {
+      lastFrame = t;
+      ctx.clearRect(0, 0, W, H);
+      ctx.drawImage(staticLayer, 0, 0, W, H);
+      drawAircraft(t);
+    }
     if (!reduceMotion && !document.hidden) raf = requestAnimationFrame(frame);
   }
 
