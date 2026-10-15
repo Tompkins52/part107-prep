@@ -1,0 +1,28 @@
+{
+  "appId": "com.tompkinssoftwaresystems.part107prep",
+  "appName": "Part 107 Prep",
+  "webDir": "www",
+  "backgroundColor": "#0b1020",
+  "ios": {
+    "contentInset": "never",
+    "backgroundColor": "#0b1020",
+    "scheme": "Part 107 Prep"
+  },
+  "android": {
+    "backgroundColor": "#0b1020",
+    "allowMixedContent": false
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": false,
+      "backgroundColor": "#0b1020",
+      "androidScaleType": "CENTER_CROP",
+      "showSpinner": false
+    },
+    "StatusBar": {
+      "style": "DARK",
+      "backgroundColor": "#0b1020",
+      "overlaysWebView": false
+    }
+  }
+}

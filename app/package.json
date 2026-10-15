@@ -1,0 +1,35 @@
+{
+  "name": "part107-prep-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Part 107 Prep mobile app: FAA remote pilot study guide and practice exams. All progress is stored on the device.",
+  "scripts": {
+    "sync-content": "node scripts/sync-content.js",
+    "build": "node scripts/sync-content.js",
+    "serve": "npx http-server www -p 8080 -c-1",
+    "cap:sync": "node scripts/sync-content.js && npx cap sync",
+    "android": "npm run cap:sync && npx cap open android",
+    "ios": "npm run cap:sync && npx cap open ios"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@capacitor/android": "^8.5.3",
+    "@capacitor/app": "^8.1.2",
+    "@capacitor/browser": "^8.0.5",
+    "@capacitor/cli": "^8.5.3",
+    "@capacitor/clipboard": "^8.0.1",
+    "@capacitor/core": "^8.5.3",
+    "@capacitor/haptics": "^8.0.2",
+    "@capacitor/ios": "^8.5.3",
+    "@capacitor/preferences": "^8.0.1",
+    "@capacitor/share": "^8.0.3",
+    "@capacitor/splash-screen": "^8.0.2",
+    "@capacitor/status-bar": "^8.0.4"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@fontsource/barlow": "^5.3.0",
+    "@fontsource/barlow-condensed": "^5.3.0",
+    "node-html-parser": "^9.0.4"
+  }
+}

@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" width="900" height="620" font-family="Helvetica, Arial, sans-serif" role="img" aria-labelledby="pc-title pc-desc">
+  <title id="pc-title">Practice sectional chart excerpt (fictional, not for navigation)</title>
+  <desc id="pc-desc">A fictional VFR sectional excerpt showing Riverton Regional, a towered airport inside Class D airspace with a 3,100 ft MSL ceiling and a surrounding Class E 700 ft transition area; Millbrook, a non-towered airport inside a Class E surface area; restricted area R-4071; the Badger MOA; a VOR; a Victor airway; obstacles; a private airport; a heliport; a parachute jumping area; and maximum elevation figures in each quadrangle.</desc>
+  <defs>
+    <pattern id="hatchB" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#2a63c8" stroke-width="1.3"/>
+    </pattern>
+    <pattern id="hatchM" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#c83a84" stroke-width="1.3"/>
+    </pattern>
+    <radialGradient id="vignetteE" cx="300" cy="350" r="178" gradientUnits="userSpaceOnUse">
+      <stop offset="0.83" stop-color="#e05a9b" stop-opacity="0"/>
+      <stop offset="1" stop-color="#e05a9b" stop-opacity="0.34"/>
+    </radialGradient>
+    <clipPath id="clipR"><polygon points="40,40 230,40 262,150 120,212 40,172"/></clipPath>
+    <clipPath id="clipMOA"><polygon points="600,40 880,40 880,122 640,152"/></clipPath>
+  </defs>
+
+  <!-- Chart paper -->
+  <rect width="900" height="620" fill="#f4ecd8"/>
+
+  <!-- Terrain tints -->
+  <path d="M0,330 C120,300 180,360 260,330 C330,305 380,340 440,330 L440,620 L0,620 Z" fill="#dfe7b3" opacity="0.45"/>
+  <path d="M440,0 L900,0 L900,210 C800,230 720,180 640,215 C560,250 500,210 440,240 Z" fill="#e3d4a4" opacity="0.5"/>
+  <path d="M560,260 C640,250 700,300 760,280 C820,260 860,300 900,290 L900,620 L520,620 C540,520 520,420 560,260 Z" fill="#dfe7b3" opacity="0.35"/>
+
+  <!-- Contour lines -->
+  <g fill="none" stroke="#b98c5a" stroke-width="1" opacity="0.55">
+    <path d="M0,460 C80,420 140,470 220,440 C300,410 360,470 440,450 C500,436 540,470 600,460"/>
+    <path d="M0,500 C90,470 150,520 230,490 C320,455 370,520 450,495"/>
+    <path d="M0,560 C100,530 160,580 240,555 C320,530 390,585 470,560 C550,535 600,580 660,560"/>
+    <path d="M520,0 C560,60 640,70 700,40 C760,10 820,50 900,30"/>
+    <path d="M460,120 C520,150 600,120 660,160 C720,200 800,170 900,200"/>
+    <path d="M620,320 C680,300 740,340 800,320 C840,306 870,330 900,320"/>
+    <path d="M600,600 C660,570 720,610 780,580 C840,552 870,590 900,575"/>
+  </g>
+
+  <!-- Water -->
+  <path d="M900,250 C830,280 790,330 740,350 C690,370 650,420 600,470 C560,510 520,560 480,620" fill="none" stroke="#8fc2e6" stroke-width="7" stroke-linecap="round" opacity="0.9"/>
+  <path d="M110,250 C140,232 185,240 196,270 C206,298 170,318 138,310 C105,302 92,268 110,250 Z" fill="#8fc2e6" opacity="0.9"/>
+  <text x="150" y="282" font-size="9" fill="#2a5e8a" text-anchor="middle" font-style="italic">Bass Lake</text>
+
+  <!-- Roads -->
+  <g fill="none" stroke="#6b5a40" stroke-width="1.6" opacity="0.8">
+    <path d="M0,390 L250,386 L340,384 L480,392 L720,420 L900,428"/>
+    <path d="M300,0 L298,120 L302,300 L300,620"/>
+    <path d="M680,0 L676,160 L684,620"/>
+  </g>
+
+  <!-- Isogonic line -->
+  <line x1="36" y1="230" x2="118" y2="612" stroke="#c83a84" stroke-width="1.2" stroke-dasharray="7 4"/>
+  <text x="110" y="595" font-size="10" fill="#c83a84" transform="rotate(78 110 595)">3°W</text>
+
+  <!-- Latitude and longitude lines with minute ticks -->
+  <g stroke="#333" stroke-width="0.9">
+    <line x1="0" y1="310" x2="900" y2="310"/>
+    <line x1="480" y1="0" x2="480" y2="620"/>
+  </g>
+  <g stroke="#333" stroke-width="0.9">
+    <path d="M12,306 V314 M24,306 V314 M36,306 V314 M48,306 V314 M60,303 V317 M72,306 V314 M84,306 V314 M96,306 V314 M108,306 V314 M120,303 V317 M132,306 V314 M144,306 V314 M156,306 V314 M168,306 V314 M180,303 V317 M192,306 V314 M204,306 V314 M216,306 V314 M228,306 V314 M240,303 V317 M252,306 V314 M264,306 V314 M276,306 V314 M288,306 V314 M312,306 V314 M324,306 V314 M336,306 V314 M348,306 V314 M360,303 V317 M372,306 V314 M384,306 V314 M396,306 V314 M408,306 V314 M420,303 V317 M432,306 V314 M444,306 V314 M456,306 V314 M468,306 V314 M492,306 V314 M504,306 V314 M516,306 V314 M528,306 V314 M540,303 V317 M552,306 V314 M564,306 V314 M576,306 V314 M588,306 V314 M600,303 V317 M612,306 V314 M624,306 V314 M636,306 V314 M648,306 V314 M660,303 V317 M672,306 V314 M696,306 V314 M708,306 V314 M720,303 V317 M732,306 V314 M744,306 V314 M756,306 V314 M768,306 V314 M780,303 V317 M792,306 V314 M804,306 V314 M816,306 V314 M828,306 V314 M840,303 V317 M852,306 V314 M864,306 V314 M876,306 V314 M888,306 V314"/>
+    <path d="M476,12 H484 M476,24 H484 M476,36 H484 M476,48 H484 M473,60 H487 M476,72 H484 M476,84 H484 M476,96 H484 M476,108 H484 M473,120 H487 M476,132 H484 M476,144 H484 M476,156 H484 M476,168 H484 M473,180 H487 M476,192 H484 M476,204 H484 M476,216 H484 M476,228 H484 M473,240 H487 M476,252 H484 M476,264 H484 M476,276 H484 M476,288 H484 M476,324 H484 M476,336 H484 M476,348 H484 M473,360 H487 M476,372 H484 M476,384 H484 M476,396 H484 M476,408 H484 M473,420 H487 M476,432 H484 M476,444 H484 M476,456 H484 M476,468 H484 M473,480 H487 M476,492 H484 M476,504 H484 M476,516 H484 M476,528 H484 M473,540 H487 M476,552 H484 M476,564 H484 M476,576 H484 M476,588 H484 M473,600 H487 M476,612 H484"/>
+  </g>
+  <text x="6" y="304" font-size="11" fill="#222" font-weight="bold">42°00'</text>
+  <text x="486" y="14" font-size="11" fill="#222" font-weight="bold">88°30'</text>
+
+  <!-- Restricted area R-4071 (blue hatched border on the inside) -->
+  <polygon points="40,40 230,40 262,150 120,212 40,172" fill="none" stroke="url(#hatchB)" stroke-width="22" clip-path="url(#clipR)"/>
+  <polygon points="40,40 230,40 262,150 120,212 40,172" fill="none" stroke="#2a63c8" stroke-width="1.6"/>
+  <text x="112" y="112" font-size="14" fill="#2a63c8" font-weight="bold">R-4071</text>
+
+  <!-- Badger MOA (magenta hatched border on the inside) -->
+  <polygon points="600,40 880,40 880,122 640,152" fill="none" stroke="url(#hatchM)" stroke-width="22" clip-path="url(#clipMOA)"/>
+  <polygon points="600,40 880,40 880,122 640,152" fill="none" stroke="#c83a84" stroke-width="1.6"/>
+  <text x="700" y="82" font-size="13" fill="#c83a84" font-weight="bold">BADGER MOA</text>
+
+  <!-- Victor airway -->
+  <line x1="150" y1="530" x2="900" y2="500" stroke="#5aa0d8" stroke-width="2.2" opacity="0.85"/>
+  <g transform="rotate(-2 540 515)">
+    <rect x="519" y="506" width="42" height="18" fill="#f4ecd8" stroke="#5aa0d8" stroke-width="1"/>
+    <text x="540" y="519" font-size="11" fill="#2a63c8" text-anchor="middle" font-weight="bold">V12</text>
+  </g>
+
+  <!-- Class E transition area: magenta vignette, hard edge outside, fading inward -->
+  <circle cx="300" cy="350" r="178" fill="url(#vignetteE)"/>
+
+  <!-- Class D airspace: dashed blue ring with ceiling -->
+  <circle cx="300" cy="350" r="80" fill="none" stroke="#2a63c8" stroke-width="2.2" stroke-dasharray="8 5"/>
+  <text x="300" y="298" font-size="13" fill="#2a63c8" text-anchor="middle" font-weight="bold">[-31]</text>
+
+  <!-- City -->
+  <polygon points="206,200 274,194 292,226 278,262 222,266 200,234" fill="#f1e38c" stroke="#d8c860" stroke-width="0.8" opacity="0.9"/>
+  <text x="246" y="190" font-size="10" fill="#333" text-anchor="middle">RIVERTON</text>
+
+  <!-- Heliport -->
+  <circle cx="400" cy="250" r="7" fill="none" stroke="#c83a84" stroke-width="1.6"/>
+  <text x="400" y="254" font-size="9" fill="#c83a84" text-anchor="middle" font-weight="bold">H</text>
+  <text x="412" y="246" font-size="9" fill="#c83a84">MERCY HOSP</text>
+
+  <!-- Riverton Regional: towered airport with runway layout -->
+  <g transform="translate(300 350)">
+    <rect x="-20" y="-3" width="40" height="6" fill="#2a63c8" transform="rotate(-28)"/>
+    <rect x="-14" y="-2.5" width="28" height="5" fill="#2a63c8" transform="rotate(50)"/>
+  </g>
+  <text x="232" y="452" font-size="12.5" fill="#2a63c8" font-weight="bold">RIVERTON RGNL (RVN)</text>
+  <text x="232" y="467" font-size="11" fill="#2a63c8">CT - 118.3 ★   ATIS 124.6</text>
+  <text x="232" y="482" font-size="11" fill="#2a63c8">612  *L 54  122.95 Ⓒ</text>
+
+  <!-- Obstacle (SE quadrangle) -->
+  <g transform="translate(560 400)">
+    <path d="M-6,10 L0,-12 L6,10" fill="none" stroke="#222" stroke-width="1.4"/>
+    <circle cx="0" cy="-13" r="2" fill="#222"/>
+  </g>
+  <text x="572" y="396" font-size="11" fill="#222" font-weight="bold">1549</text>
+  <text x="572" y="409" font-size="10" fill="#222">(1049)</text>
+
+  <!-- Lighted group obstacle (NE quadrangle) -->
+  <g transform="translate(760 150)">
+    <path d="M-12,10 L-7,-10 L-2,10 M2,10 L7,-12 L12,10" fill="none" stroke="#222" stroke-width="1.4"/>
+    <circle cx="-7" cy="-11" r="1.8" fill="#222"/>
+    <circle cx="7" cy="-13" r="1.8" fill="#222"/>
+    <g stroke="#222" stroke-width="1">
+      <line x1="7" y1="-18" x2="7" y2="-24"/><line x1="12" y1="-16" x2="16" y2="-20"/><line x1="2" y1="-16" x2="-2" y2="-20"/>
+    </g>
+  </g>
+  <text x="776" y="150" font-size="11" fill="#222" font-weight="bold">2349</text>
+  <text x="776" y="163" font-size="10" fill="#222">(1810)</text>
+
+  <!-- Class E surface area around Millbrook -->
+  <circle cx="680" cy="440" r="70" fill="none" stroke="#c83a84" stroke-width="2.2" stroke-dasharray="8 5"/>
+
+  <!-- Millbrook: non-towered airport -->
+  <circle cx="680" cy="440" r="9" fill="none" stroke="#c83a84" stroke-width="1.8"/>
+  <rect x="677" y="426" width="6" height="28" fill="#c83a84"/>
+  <text x="700" y="486" font-size="12.5" fill="#c83a84" font-weight="bold">MILLBROOK (3K7)</text>
+  <text x="700" y="501" font-size="11" fill="#c83a84">734  *L 36  122.8 Ⓒ</text>
+  <text x="700" y="516" font-size="11" fill="#c83a84">RP 18</text>
+
+  <!-- Private airport -->
+  <circle cx="430" cy="540" r="9" fill="none" stroke="#c83a84" stroke-width="1.6"/>
+  <text x="430" y="544" font-size="10" fill="#c83a84" text-anchor="middle" font-weight="bold">R</text>
+  <text x="444" y="536" font-size="11" fill="#c83a84" font-weight="bold">ZELLER (Pvt)</text>
+  <text x="444" y="549" font-size="10" fill="#c83a84">780 - 22</text>
+
+  <!-- Parachute jumping area -->
+  <g transform="translate(822 300)">
+    <path d="M-10,0 A10,10 0 0 1 10,0 Z" fill="#c83a84"/>
+    <line x1="-10" y1="0" x2="0" y2="12" stroke="#c83a84" stroke-width="1.2"/>
+    <line x1="10" y1="0" x2="0" y2="12" stroke="#c83a84" stroke-width="1.2"/>
+  </g>
+
+  <!-- VOR with compass rose -->
+  <g transform="translate(150 530)">
+    <circle r="58" fill="none" stroke="#5aa0d8" stroke-width="1.2"/>
+    <g stroke="#5aa0d8" stroke-width="1">
+      <path d="M0,-58 V-50 M0,58 V50 M-58,0 H-50 M58,0 H50"/>
+      <path d="M29,-50.2 L25,-43.3 M50.2,-29 L43.3,-25 M50.2,29 L43.3,25 M29,50.2 L25,43.3 M-29,50.2 L-25,43.3 M-50.2,29 L-43.3,25 M-50.2,-29 L-43.3,-25 M-29,-50.2 L-25,-43.3"/>
+      <path d="M10,-57.1 V-52 M20,-54.4 L18.5,-50 M-10,-57.1 V-52 M-20,-54.4 L-18.5,-50 M10,57.1 V52 M20,54.4 L18.5,50 M-10,57.1 V52 M-20,54.4 L-18.5,50 M57.1,10 H52 M54.4,20 L50,18.5 M57.1,-10 H52 M54.4,-20 L50,-18.5 M-57.1,10 H-52 M-54.4,20 L-50,18.5 M-57.1,-10 H-52 M-54.4,-20 L-50,-18.5"/>
+    </g>
+    <text x="0" y="-62" font-size="9" fill="#5aa0d8" text-anchor="middle">0</text>
+    <text x="64" y="3" font-size="9" fill="#5aa0d8" text-anchor="middle">9</text>
+    <text x="0" y="70" font-size="9" fill="#5aa0d8" text-anchor="middle">18</text>
+    <text x="-64" y="3" font-size="9" fill="#5aa0d8" text-anchor="middle">27</text>
+    <polygon points="-7,-4 0,-8 7,-4 7,4 0,8 -7,4" fill="none" stroke="#2a63c8" stroke-width="1.4"/>
+    <rect x="-7" y="-4" width="14" height="8" fill="none" stroke="#2a63c8" stroke-width="1"/>
+    <circle r="1.5" fill="#2a63c8"/>
+  </g>
+  <g transform="translate(56 596)">
+    <rect x="0" y="-26" width="84" height="30" fill="#f4ecd8" stroke="#2a63c8" stroke-width="1"/>
+    <text x="42" y="-13" font-size="10" fill="#2a63c8" text-anchor="middle" font-weight="bold">RIVERTON</text>
+    <text x="42" y="0" font-size="10" fill="#2a63c8" text-anchor="middle">114.2  RVN</text>
+  </g>
+
+  <!-- Maximum elevation figures, one per quadrangle -->
+  <g fill="#222" font-weight="bold">
+    <text x="330" y="90" font-size="26">1<tspan font-size="15" dy="-10">4</tspan></text>
+    <text x="540" y="260" font-size="26">2<tspan font-size="15" dy="-10">5</tspan></text>
+    <text x="260" y="590" font-size="26">1<tspan font-size="15" dy="-10">3</tspan></text>
+    <text x="830" y="590" font-size="26">1<tspan font-size="15" dy="-10">7</tspan></text>
+  </g>
+
+  <!-- Caption -->
+  <rect x="582" y="588" width="312" height="26" fill="#f4ecd8" stroke="#555" stroke-width="0.8"/>
+  <text x="738" y="605" font-size="10.5" fill="#333" text-anchor="middle">PRACTICE CHART. Fictional places and data. Not for navigation.</text>
+</svg>

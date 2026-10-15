@@ -36,6 +36,10 @@ To add a question, append an object to the `questions` array:
 
 `cat` must be one of `regulations`, `airspace`, `weather`, `loading`, or `operations`. Set `fig: "chart"` to show the practice sectional chart with the question.
 
+## Mobile app
+
+The `app/` folder holds the iOS and Android app (Capacitor). It reuses this site's study content and question bank and stores all progress on the device. See `app/README.md` and `app/PUBLISHING.md`.
+
 ## Running locally
 
 Open `index.html` in a browser, or serve the folder:

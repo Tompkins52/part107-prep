@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Part 107 Prep</string>
+    <string name="title_activity_main">Part 107 Prep</string>
+    <string name="package_name">com.tompkinssoftwaresystems.part107prep</string>
+    <string name="custom_url_scheme">com.tompkinssoftwaresystems.part107prep</string>
+</resources>
