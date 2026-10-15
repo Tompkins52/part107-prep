@@ -175,7 +175,7 @@ copy(path.join(SITE, "assets/img/practice-chart.svg"), "img/practice-chart.svg")
 /* ---------- Capacitor runtime and plugins ---------- */
 const NM = path.join(APP, "node_modules", "@capacitor");
 copy(path.join(NM, "core/dist/capacitor.js"), "js/cap/core.js");
-["preferences", "browser", "clipboard", "share", "status-bar", "app", "splash-screen", "haptics"].forEach((p) => {
+["preferences", "browser", "clipboard", "share", "status-bar", "app", "splash-screen", "haptics", "local-notifications"].forEach((p) => {
   copy(path.join(NM, p, "dist/plugin.js"), "js/cap/" + p + ".js");
 });
 

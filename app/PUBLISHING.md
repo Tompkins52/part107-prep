@@ -71,7 +71,8 @@ Google Play App Signing manages the key that signs what users download, but you 
    - **Content rating:** fill in the IARC questionnaire; it is an education/reference app, expect "Everyone".
    - **Target audience:** 18 and over (or 16 and over). Do not select under-13 age groups; that triggers the Families policy.
    - **News app:** No.
-   - **Data safety:** "Does your app collect or share any of the required user data types?" No. The app stores progress only on the device and never transmits it. Say data is not collected and not shared. Encryption in transit and deletion questions will not apply.
+   - **Data safety:** "Does your app collect or share any of the required user data types?" No. The app stores progress only on the device and never transmits it. Say data is not collected and not shared. Encryption in transit and deletion questions will not apply. The optional daily reminder is a local notification scheduled by the phone itself, which is not data collection.
+   - **Permissions:** the notifications plugin declares POST_NOTIFICATIONS (asked only when the user turns reminders on). The manifest removes SCHEDULE_EXACT_ALARM because a daily reminder does not need exact timing, so no special-permission justification is needed.
    - **Government apps:** No. **Financial features:** none. **Health:** none.
    - **Privacy policy:** https://tompkins52.github.io/part107-prep/privacy.html
    - **App category:** Education. Tags: Education, Test preparation.
@@ -116,7 +117,7 @@ Google requires new apps and updates to target Android 16 (API 36) since August 
 
 Reviewers reject apps they cannot understand quickly. Put this in the "Notes" field for App Review:
 
-> Part 107 Prep is a study app for the FAA remote pilot (drone) knowledge test. No account or login is needed. All progress is stored only on the device using local app storage; there is no server. To test: tap Start studying on the welcome screen, open Exam, choose Quick check, answer the 20 questions, and view the scored results. The Path tab is a checklist of the FAA certification steps; the Study tab holds the reading material; More has settings, backup, and the privacy policy.
+> Part 107 Prep is a study app for the FAA remote pilot (drone) knowledge test. No account or login is needed. All progress is stored only on the device using local app storage; there is no server. To test: tap "Commit to my goal" on the welcome screen (name and date are optional), open Exam, choose Quick check, answer the 20 questions, and view the scored results. The Path tab is a checklist of the FAA certification steps with costs; the Study tab holds the reading material and flashcards; Home shows the daily goal, streak, plan, and question of the day; More has settings (including an optional local daily reminder), backup, and the privacy policy. Sounds are short synthesized tones and can be turned off in Settings.
 
 Apple guideline 4.2 (minimum functionality) is the one to be ready for with any web-based app. This app has native-feeling navigation, works fully offline, tracks progress on the device, and does much more than show a website, which is what that guideline is about. If a reviewer still asks, reply with the paragraph above.
 
@@ -138,7 +139,9 @@ Apple guideline 4.2 (minimum functionality) is the one to be ready for with any 
 >
 > STUDY: five modules matched to the FAA's knowledge areas: regulations, airspace and sectional chart reading, weather, loading and performance, and operations. Plus a section-by-section Part 107 cheat sheet, a safety guide with a preflight checklist, and official FAA links.
 >
-> PRACTICE EXAMS: more than 200 original questions with explanations and references. Full 60-question timed exams weighted like the real test, 20-question quick checks, topic quizzes, and a weak-spots mode that drills what you have missed. Every attempt gets a score, a pass/fail verdict at 70 percent, and a breakdown by category.
+> PRACTICE EXAMS: more than 200 original questions with explanations and references. Full 60-question timed exams weighted like the real test, 20-question quick checks, topic quizzes, and a weak-spots mode that drills what you have missed. Every attempt gets a score, a pass/fail verdict at 70 percent, and a breakdown by category. Your place is saved automatically, so a phone call never costs you a test.
+>
+> BUILT TO STICK: a daily goal you choose, a streak with freeze days, a plan for each day, a question of the day, spaced review that brings back what you missed on the right day, 138 flashcards for the numbers and codes, achievements for real milestones, and an optional daily reminder.
 >
 > YOUR PROGRESS, ON YOUR PHONE: readiness estimate, score trends, accuracy by category, topics to review, and a countdown to your test date. No account, no sign-in, no server, no ads. Nothing you enter ever leaves your device. A backup code lets you move your progress to a new phone yourself.
 >
