@@ -5,7 +5,7 @@
   var BANK = window.P107_BANK, CONTENT = window.P107_CONTENT, CARDS = window.P107_CARDS;
   var APP_VERSION = "1.1.0";
   var COMPANY = "Tompkins Software Systems";
-  var SITE = "https://tompkins52.github.io/part107-prep/";
+  var SITE = "https://part107.tompkinssoftwaresystems.com/";
 
   function plugin(ns, name) { return (window[ns] && window[ns][name]) || null; }
   var CapApp = plugin("capacitorApp", "App"), Browser = plugin("capacitorBrowser", "Browser"), Clipboard = plugin("capacitorClipboard", "Clipboard");

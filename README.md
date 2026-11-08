@@ -2,7 +2,7 @@
 
 A free, independent study site for the FAA Part 107 remote pilot certificate (the commercial drone license). Static HTML, CSS, and JavaScript with no build step, so it runs anywhere, including GitHub Pages.
 
-Live site: https://tompkins52.github.io/part107-prep/
+Live site: https://part107.tompkinssoftwaresystems.com/
 
 ## What is in it
 
