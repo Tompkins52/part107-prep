@@ -15,7 +15,7 @@ The app is built with Capacitor 8: a native iOS and Android shell around the web
 | Google Play Console account | $25 one time | play.google.com/console |
 | D-U-N-S number for the LLC | Free | Required by both stores for an organization account. dnb.com; allow up to 30 days, usually faster. |
 | A domain and basic website for the LLC | Domain cost only | Apple requires an organization's enrollment email to be on the company's domain and a working public website on that domain. Google requires website verification for new organization accounts. |
-| A privacy policy URL | Free | Already published: https://tompkins52.github.io/part107-prep/privacy.html |
+| A privacy policy URL | Free | Already published: https://part107.tompkinssoftwaresystems.com/privacy.html |
 
 ### Organization account or personal account?
 
@@ -74,7 +74,7 @@ Google Play App Signing manages the key that signs what users download, but you 
    - **Data safety:** "Does your app collect or share any of the required user data types?" No. The app stores progress only on the device and never transmits it. Say data is not collected and not shared. Encryption in transit and deletion questions will not apply. The optional daily reminder is a local notification scheduled by the phone itself, which is not data collection.
    - **Permissions:** the notifications plugin declares POST_NOTIFICATIONS (asked only when the user turns reminders on). The manifest removes SCHEDULE_EXACT_ALARM because a daily reminder does not need exact timing, so no special-permission justification is needed.
    - **Government apps:** No. **Financial features:** none. **Health:** none.
-   - **Privacy policy:** https://tompkins52.github.io/part107-prep/privacy.html
+   - **Privacy policy:** https://part107.tompkinssoftwaresystems.com/privacy.html
    - **App category:** Education. Tags: Education, Test preparation.
    - **Store listing:** see the text in section 4 below. Required art: app icon 512 x 512 PNG (use `resources/icon-only.png` scaled; Android Studio or any image tool), feature graphic 1024 x 500, at least two phone screenshots (take them from the emulator at 1080 x 1920 or larger), and optionally 7 inch and 10 inch tablet screenshots.
 4. **Testing first:** Release, Testing, Internal testing. Create a release, upload the `.aab`, add your own Gmail address as a tester, and install it from the test link. This catches signing and manifest problems without a public release.
@@ -100,7 +100,7 @@ Google requires new apps and updates to target Android 16 (API 36) since August 
 1. Enroll at developer.apple.com (organization: D-U-N-S number, legal entity, authority to sign, company-domain email, public website). Apple verifies by phone; allow a week or two.
 2. In App Store Connect (appstoreconnect.apple.com), My Apps, plus, New App: iOS, name "Part 107 Prep", primary language English (U.S.), bundle ID from the list (register it first at developer.apple.com, Identifiers, if it is not there), SKU `part107prep`.
 3. **App Information:** category Education, secondary category Reference. Content rights: no third-party content requiring rights. Age rating: answer the questionnaire; expect 4+.
-4. **App Privacy:** choose "Data Not Collected". Because nothing leaves the device, every data type is "not collected". The privacy policy URL is required anyway: https://tompkins52.github.io/part107-prep/privacy.html
+4. **App Privacy:** choose "Data Not Collected". Because nothing leaves the device, every data type is "not collected". The privacy policy URL is required anyway: https://part107.tompkinssoftwaresystems.com/privacy.html
 5. **Pricing and Availability:** Free, all territories.
 6. **App Store listing** for version 1.0: screenshots (6.9 inch iPhone set required; 6.5 inch and 12.9 inch iPad sets recommended; take them from the Simulator with Cmd+S), description, keywords, support URL (the website), marketing URL (optional). Text is in section 4.
 7. **Export compliance:** the app uses no custom encryption. `ITSAppUsesNonExemptEncryption` is set to false in `Info.plist`, so Xcode uploads will not ask every time.
@@ -151,9 +151,9 @@ Apple guideline 4.2 (minimum functionality) is the one to be ready for with any 
 
 **Category:** Education (secondary: Reference)
 
-**Support URL:** https://tompkins52.github.io/part107-prep/
+**Support URL:** https://part107.tompkinssoftwaresystems.com/
 
-**Privacy policy URL:** https://tompkins52.github.io/part107-prep/privacy.html
+**Privacy policy URL:** https://part107.tompkinssoftwaresystems.com/privacy.html
 
 ## 5. Releasing updates
 
